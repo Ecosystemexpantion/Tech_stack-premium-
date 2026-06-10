@@ -395,6 +395,18 @@ footer{background:#030306;text-align:center;padding:16px;font-size:.6rem;color:#
 </div>
 
 <script>
+// Intercept createElement so every iframe gets clipboard-write BEFORE src is set
+(function(){
+  var _orig = document.createElement.bind(document);
+  document.createElement = function(tag){
+    var el = _orig(tag);
+    if(typeof tag === 'string' && tag.toLowerCase() === 'iframe'){
+      el.allow = 'clipboard-read; clipboard-write';
+    }
+    return el;
+  };
+})();
+
 let total = 5 * 60;
 const minsEl = document.getElementById('mins');
 const secsEl = document.getElementById('secs');
@@ -440,21 +452,6 @@ function initiatePaystack() {
   emailInput.classList.remove('error');
   submitBtn.disabled = true;
   submitBtn.textContent = 'Opening Secure Checkout…';
-
-  // Grant clipboard-write to Paystack's injected iframe so "Copy" works
-  var _clipObs = new MutationObserver(function(mutations) {
-    for (var m of mutations) {
-      for (var node of m.addedNodes) {
-        if (node.nodeType === 1 && node.tagName === 'IFRAME' &&
-            node.src && node.src.includes('paystack')) {
-          node.allow = 'clipboard-read; clipboard-write';
-          _clipObs.disconnect();
-          return;
-        }
-      }
-    }
-  });
-  _clipObs.observe(document.documentElement, { childList: true, subtree: true });
 
   var handler = PaystackPop.setup({
     key: 'pk_live_d4b401792b62d34e6664a0180eb4e0eb036ebe16',
