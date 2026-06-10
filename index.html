@@ -427,6 +427,12 @@ const tick = setInterval(() => {
 
 emailjs.init('P6vjGqbInRNLni8GS');
 
+// Capture affiliate ref from URL (?ref=oguji) and persist for the session
+(function(){
+  var ref = new URLSearchParams(window.location.search).get('ref');
+  if(ref) sessionStorage.setItem('_aff', ref.toLowerCase());
+})();
+
 function openPayModal() {
   document.getElementById('pay-modal').classList.add('active');
   document.getElementById('pay-email').focus();
@@ -467,12 +473,31 @@ function initiatePaystack() {
     },
     callback: function(response) {
       closePayModal();
-      emailjs.send('service_ab7fo9g', 'template_fnqmdxw', {
-        to_email: email,
+      var affRef = sessionStorage.getItem('_aff') || 'direct';
+      var saleTime = new Date().toLocaleString('en-NG', {timeZone:'Africa/Lagos'});
+      var notifyPayload = {
         product_name: 'EEM26 Tech Stack',
-        product_link: 'https://ecosystemexpantion.github.io/Product_page/',
-        payment_ref: response.reference
-      }).finally(function() {
+        buyer_email: email,
+        payment_ref: response.reference,
+        sale_source: affRef,
+        sale_time: saleTime
+      };
+      var sends = [
+        // Buyer: product access email
+        emailjs.send('service_ab7fo9g', 'template_fnqmdxw', {
+          to_email: email,
+          product_name: 'EEM26 Tech Stack',
+          product_link: 'https://ecosystemexpantion.github.io/Product_page/',
+          payment_ref: response.reference
+        }),
+        // Owner: sale notification
+        emailjs.send('service_ab7fo9g', 'template_sale_notify', Object.assign({to_email:'excel8109@gmail.com'}, notifyPayload))
+      ];
+      // Affiliate: sale notification (only if purchase came via affiliate link)
+      if(affRef === 'oguji') {
+        sends.push(emailjs.send('service_ab7fo9g', 'template_sale_notify', Object.assign({to_email:'ogujiexcellent@gmail.com'}, notifyPayload)));
+      }
+      Promise.allSettled(sends).finally(function(){
         window.location.href = 'https://ecosystemexpantion.github.io/Product_page/';
       });
     },
