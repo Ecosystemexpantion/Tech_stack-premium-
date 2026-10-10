@@ -324,7 +324,7 @@ footer{background:rgba(255,255,255,.04);-webkit-backdrop-filter:blur(18px);backd
   <div class="cta-stack reveal">
     <div class="price-row">
       <span class="old-price">₦70,000</span>
-      <span class="new-price">₦39,820</span>
+      <span class="new-price">₦46,820</span>
       <span class="save-badge">3 LEFT</span>
     </div>
     <a href="#" class="dl-btn buy-trigger">⚡ Download the Premium Version Now</a>
@@ -423,7 +423,7 @@ footer{background:rgba(255,255,255,.04);-webkit-backdrop-filter:blur(18px);backd
   </div>
   <div style="text-align:center;margin-top:28px" class="reveal">
     <a href="#" class="dl-btn buy-trigger" style="max-width:480px;margin:0 auto;display:flex">⚡ Download the Premium Version Now</a>
-    <p style="font-size:.7rem;color:var(--muted);margin-top:10px;letter-spacing:.5px">Only 3 slots left · ₦39,820 · Victor handles Day 4</p>
+    <p style="font-size:.7rem;color:var(--muted);margin-top:10px;letter-spacing:.5px">Only 3 slots left · ₦46,820 · Victor handles Day 4</p>
   </div>
 </div>
 
@@ -459,7 +459,7 @@ footer{background:rgba(255,255,255,.04);-webkit-backdrop-filter:blur(18px);backd
   <div class="cta-stack reveal" style="margin:0 auto;max-width:480px">
     <div class="price-row">
       <span class="old-price">₦70,000</span>
-      <span class="new-price">₦39,820</span>
+      <span class="new-price">₦46,820</span>
       <span class="save-badge">TODAY ONLY</span>
     </div>
     <a href="#" class="dl-btn buy-trigger">⚡ Download the Premium Version Now</a>
@@ -477,7 +477,7 @@ footer{background:rgba(255,255,255,.04);-webkit-backdrop-filter:blur(18px);backd
     <div id="pay-modal-title">SECURE YOUR SLOT</div>
     <p id="pay-modal-sub">This is the last decision you make manually. After this, your AI handles everything. Enter your email — your access arrives instantly.</p>
     <input type="email" id="pay-email" placeholder="Enter your email address" autocomplete="email" required>
-    <button id="pay-submit" onclick="initiatePaystack()">🔒 Pay ₦39,820 Securely</button>
+    <button id="pay-submit" onclick="initiatePaystack()">🔒 Pay ₦46,820 Securely</button>
     <div id="pay-modal-foot">Powered by Paystack &nbsp;·&nbsp; 256-bit Encrypted &nbsp;·&nbsp; Instant Access</div>
   </div>
 </div>
@@ -550,7 +550,7 @@ function initiatePaystack() {
   var handler = PaystackPop.setup({
     key: 'pk_live_d4b401792b62d34e6664a0180eb4e0eb036ebe16',
     email: email,
-    amount: 3982000,
+    amount: 4682000,
     currency: 'NGN',
     ref: 'EEM26_' + Date.now() + '_' + Math.floor(Math.random() * 1e6),
     label: 'EEM26 Tech Stack Premium',
@@ -591,7 +591,7 @@ function initiatePaystack() {
     },
     onClose: function() {
       submitBtn.disabled = false;
-      submitBtn.innerHTML = '🔒 Pay ₦39,820 Securely';
+      submitBtn.innerHTML = '🔒 Pay ₦46,820 Securely';
     }
   });
   handler.openIframe();
