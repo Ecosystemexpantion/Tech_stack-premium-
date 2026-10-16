@@ -67,7 +67,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(6,6,10,.98);backdrop-filte
 .hero-sub{font-size:clamp(.9rem,2.2vw,1.02rem);color:var(--muted);max-width:480px;margin:20px auto 0;line-height:1.75;font-weight:500}
 .hero-sub strong{color:var(--text);font-weight:700}
 
-.victor-promise{background:linear-gradient(135deg,rgba(245,166,35,.1),rgba(245,166,35,.04));border:1px solid rgba(245,166,35,.3);border-left:4px solid var(--gold);border-radius:0 12px 12px 0;padding:22px;margin:28px 0;text-align:left;max-width:520px;width:100%}
+.stack-promise{background:linear-gradient(135deg,rgba(245,166,35,.1),rgba(245,166,35,.04));border:1px solid rgba(245,166,35,.3);border-left:4px solid var(--gold);border-radius:0 12px 12px 0;padding:22px;margin:28px 0;text-align:left;max-width:520px;width:100%}
 .vp-label{font-size:.6rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:8px}
 .vp-text{font-size:.95rem;line-height:1.7;color:var(--text);font-weight:600}
 .vp-text span{color:var(--gold)}
@@ -101,7 +101,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(6,6,10,.98);backdrop-filte
 .tl-desc{font-size:.82rem;color:var(--muted);line-height:1.6}
 .tl-desc strong{color:var(--gold)}
 
-.victor-card{background:linear-gradient(135deg,rgba(245,166,35,.08),rgba(245,166,35,.03));border:1px solid rgba(245,166,35,.25);border-radius:16px;padding:28px 22px;margin:28px 0;text-align:center}
+
 .vc-crown{font-size:2rem;margin-bottom:10px;display:block}
 .vc-role{font-size:.6rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:8px}
 .vc-name{font-family:'Bebas Neue',cursive;font-size:2.2rem;color:var(--text);letter-spacing:2px;margin-bottom:10px}
@@ -178,6 +178,8 @@ footer{background:#030306;text-align:center;padding:16px;font-size:.6rem;color:#
 #pay-submit:disabled{opacity:.6;cursor:not-allowed;transform:none}
 #pay-modal-foot{text-align:center;font-size:.65rem;color:var(--muted);margin-top:12px;letter-spacing:.5px}
 
+.stack-code{display:inline-block;font-size:.58rem;font-weight:900;letter-spacing:2px;color:var(--gold2);background:rgba(245,166,35,.15);border:1px solid rgba(245,166,35,.45);border-radius:50px;padding:3px 10px;margin-bottom:6px}
+
 /* ===== LIQUID GLASS THEME ===== */
 :root{
   --glass:rgba(255,255,255,.07);
@@ -204,14 +206,14 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
 .hero-dots,.hero-glow{display:none}
 
 /* glass surfaces */
-.victor-promise,.victor-card,.domain-card,.video-card,.pnum,.urgency-box,.timer-wrap,.slot-inner,.top-timer-row,#pay-modal-box,.exclusive-badge,.trust-item{
+.stack-promise,.domain-card,.video-card,.pnum,.urgency-box,.timer-wrap,.slot-inner,.top-timer-row,#pay-modal-box,.exclusive-badge,.trust-item{
   background:linear-gradient(135deg,rgba(255,255,255,.14),rgba(255,255,255,.04))!important;
   -webkit-backdrop-filter:blur(26px) saturate(180%);backdrop-filter:blur(26px) saturate(180%);
   border:1px solid var(--glass-border)!important;
   box-shadow:var(--glass-shine),var(--glass-shadow);
 }
-.victor-promise{border-left:1px solid var(--glass-border)!important;border-radius:20px}
-.victor-card,.domain-card,.video-card,.urgency-box,.timer-wrap,#pay-modal-box{border-radius:24px}
+.stack-promise{border-left:1px solid var(--glass-border)!important;border-radius:20px}
+.domain-card,.video-card,.urgency-box,.timer-wrap,#pay-modal-box{border-radius:24px}
 .pnum{border-radius:18px}
 .slot-inner{border-radius:24px;padding:18px 16px}
 .top-timer-row{border-radius:22px;padding:12px 18px;max-width:520px;margin:0 auto}
@@ -263,7 +265,7 @@ nav{background:rgba(255,255,255,.08)!important;-webkit-backdrop-filter:blur(28px
 .old-price{color:#C4C4DC}
 footer{background:rgba(255,255,255,.04);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);color:#8E8EAA;border-top:1px solid rgba(255,255,255,.12)}
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
-  .victor-promise,.victor-card,.domain-card,.video-card,.pnum,.urgency-box,.timer-wrap,.slot-inner,.top-timer-row,#pay-modal-box,nav{background:rgba(24,24,40,.92)!important}
+  .stack-promise,.domain-card,.video-card,.pnum,.urgency-box,.timer-wrap,.slot-inner,.top-timer-row,#pay-modal-box,nav{background:rgba(24,24,40,.92)!important}
 }
 </style>
 </head>
@@ -271,7 +273,7 @@ footer{background:rgba(255,255,255,.04);-webkit-backdrop-filter:blur(18px);backd
 
 <a href="#" class="float-btn buy-trigger">⚡ Download the Premium Version Now</a>
 
-<div class="ticker"><div class="ticker-inner">🔴 ONLY 3 SLOTS REMAINING &nbsp;•&nbsp; 2 OF 5 ALREADY TAKEN &nbsp;•&nbsp; COACH VICTOR PERSONALLY HANDLES YOUR FINAL SETUP &nbsp;•&nbsp; 4 DAYS — SETUP COMPLETE &nbsp;•&nbsp; START EARNING IMMEDIATELY AFTER &nbsp;&nbsp;&nbsp;&nbsp;🔴 ONLY 3 SLOTS REMAINING &nbsp;•&nbsp; 2 OF 5 ALREADY TAKEN &nbsp;•&nbsp; COACH VICTOR PERSONALLY HANDLES YOUR FINAL SETUP &nbsp;•&nbsp; 4 DAYS — SETUP COMPLETE &nbsp;•&nbsp; START EARNING IMMEDIATELY AFTER &nbsp;&nbsp;&nbsp;&nbsp;</div></div>
+<div class="ticker"><div class="ticker-inner">🔴 ONLY 3 SLOTS REMAINING &nbsp;•&nbsp; 2 OF 5 ALREADY TAKEN &nbsp;•&nbsp; 5 AI-POWERED SYSTEMS IN ONE STACK &nbsp;•&nbsp; 4 DAYS — SETUP COMPLETE &nbsp;•&nbsp; START SELLING IMMEDIATELY AFTER &nbsp;&nbsp;&nbsp;&nbsp;🔴 ONLY 3 SLOTS REMAINING &nbsp;•&nbsp; 2 OF 5 ALREADY TAKEN &nbsp;•&nbsp; 5 AI-POWERED SYSTEMS IN ONE STACK &nbsp;•&nbsp; 4 DAYS — SETUP COMPLETE &nbsp;•&nbsp; START SELLING IMMEDIATELY AFTER &nbsp;&nbsp;&nbsp;&nbsp;</div></div>
 
 <nav>
   <div class="nav-logo">EEM26</div>
@@ -308,17 +310,17 @@ footer{background:rgba(255,255,255,.04);-webkit-backdrop-filter:blur(18px);backd
 <section class="hero">
   <div class="hero-dots"></div>
   <div class="hero-glow"></div>
-  <div class="exclusive-badge reveal">◆ Exclusive — 5 People Only ◆</div>
+  <div class="exclusive-badge reveal">◆ Exclusive — 5 Slots Only ◆</div>
   <h1 class="reveal">
     <span class="line1">TECH</span>
     <span class="line2">STACK</span>
     <span class="line3">Premium Setup</span>
   </h1>
-  <p class="hero-sub reveal">You're not buying a product. You're getting a <strong>complete done-with-you setup</strong> — AI systems, premium tools, and <strong>4 personal coaches</strong> who work with you every day for <strong>4 days</strong> until you're earning.</p>
+  <p class="hero-sub reveal">A complete pack of <strong>5 AI-powered software systems</strong> that answers your customers, attracts buyers, builds your sales pages and gives you products to sell — set up with you in <strong>4 days</strong>.</p>
 
-  <div class="victor-promise reveal">
-    <div class="vp-label">◆ The Victor Guarantee</div>
-    <div class="vp-text">Your final and most important setup stage is handled by <span>Coach Victor himself</span> — the EEM26 founder. Not a team member. Victor. Personally.</div>
+  <div class="stack-promise reveal">
+    <div class="vp-label">◆ What You Get</div>
+    <div class="vp-text"><span>5 systems. One stack.</span> SRE · AAM · DPS · DRS · PCA — configured for your business and ready to sell.</div>
   </div>
 
   <div class="cta-stack reveal">
@@ -334,60 +336,59 @@ footer{background:rgba(255,255,255,.04);-webkit-backdrop-filter:blur(18px);backd
 
 <div class="trust-bar">
   <div class="trust-item">✅ Instant Access</div>
-  <div class="trust-item">👑 Victor Handles Day 4</div>
-  <div class="trust-item">⚡ 4 Days To Complete</div>
-  <div class="trust-item">💰 Earn Immediately After</div>
+  <div class="trust-item">🤖 5 Systems Included</div>
+  <div class="trust-item">⚡ 4-Day Setup</div>
+  <div class="trust-item">💰 Start Selling After</div>
 </div>
 
-<!-- 4 DAY SETUP -->
+<!-- THE STACK -->
 <div class="what-section">
-  <div class="section-tag reveal">What Happens After You Secure Your Slot</div>
+  <div class="section-tag reveal">What's Inside</div>
   <div class="divider-line reveal"></div>
-  <h2 class="section-title reveal">Your <span>4-Day</span> Setup</h2>
+  <h2 class="section-title reveal">The <span>5 Systems</span> In Your Stack</h2>
 
-  <div class="timeline">
-    <div class="tl-item reveal">
-      <div class="tl-day">1</div>
-      <div class="tl-content">
-        <div class="tl-title">SRE + AAM Systems Configured</div>
-        <div class="tl-desc">Your Smart Reply Engine and AI Acquisition Model are built and activated. <strong>Your AI starts working for you from day one.</strong></div>
-      </div>
-    </div>
-    <div class="tl-item reveal">
-      <div class="tl-day">2</div>
-      <div class="tl-content">
-        <div class="tl-title">Full Integration & Tools Setup</div>
-        <div class="tl-desc">Every tool connected. Every system linked. Our coaches handle everything that needs to be done on our end so you don't have to.</div>
-      </div>
-    </div>
-    <div class="tl-item reveal">
-      <div class="tl-day">3</div>
-      <div class="tl-content">
-        <div class="tl-title">Your Sales Page Goes Live</div>
-        <div class="tl-desc">You get a <strong>domain hosted sales page</strong> — the exact same type Coach Victor himself uses. Professional. Fast. Built to convert automatically.</div>
-      </div>
-    </div>
-    <div class="tl-item reveal">
-      <div class="tl-day gold">4</div>
-      <div class="tl-content">
-        <div class="tl-title">👑 Coach Victor — Your Final Setup</div>
-        <div class="tl-desc"><strong>The most important stage.</strong> Coach Victor personally handles and completes your final setup. After this — you start earning. Same day. This is why only 5 people get this.</div>
-      </div>
+  <div class="domain-card reveal">
+    <div class="dc-icon">🤖</div>
+    <div>
+      <div class="stack-code">SRE</div>
+      <div class="dc-title">Smart Reply Engine</div>
+      <div class="dc-desc">An AI-powered sales assistant configured to understand your products, answer customer questions, handle objections, recommend offers, and guide prospects toward completing a purchase.</div>
     </div>
   </div>
 
-  <div class="victor-card reveal">
-    <span class="vc-crown">👑</span>
-    <div class="vc-role">EEM26 Founder — Lead Coach</div>
-    <div class="vc-name">Coach Victor</div>
-    <div class="vc-promise">Your final setup is handled by Coach Victor <strong>personally.</strong> Not a team member. Not an assistant. <em>Victor himself.</em> This is what makes these 5 slots different from everything else EEM26 offers. He cannot do this for everyone — which is why only 5 people get access.</div>
+  <div class="domain-card reveal">
+    <div class="dc-icon">🧲</div>
+    <div>
+      <div class="stack-code">AAM</div>
+      <div class="dc-title">Automated Audience Magnet</div>
+      <div class="dc-desc">An automated lead-generation system designed to attract potential buyers and direct them into your DM or sales funnel without depending entirely on paid advertising.</div>
+    </div>
   </div>
 
   <div class="domain-card reveal">
     <div class="dc-icon">🌐</div>
     <div>
-      <div class="dc-title">Your Own Domain Hosted Sales Page</div>
-      <div class="dc-desc">You get the <strong>exact same type of hosted sales page</strong> Coach Victor himself uses to run EEM26. Built on Day 3. Selling for you automatically from Day 4 onwards.</div>
+      <div class="stack-code">DPS</div>
+      <div class="dc-title">Dynamic Page System</div>
+      <div class="dc-desc">A system for creating and deploying conversion-focused sales pages that present your offer, explain the benefits, answer common questions, and direct visitors toward purchase.</div>
+    </div>
+  </div>
+
+  <div class="domain-card reveal">
+    <div class="dc-icon">📦</div>
+    <div>
+      <div class="stack-code">DRS</div>
+      <div class="dc-title">Digital Resale Stack</div>
+      <div class="dc-desc">A collection of ready-to-sell digital products and resources that you can offer to customers, giving you products to start selling without creating everything from scratch.</div>
+    </div>
+  </div>
+
+  <div class="domain-card reveal">
+    <div class="dc-icon">🧭</div>
+    <div>
+      <div class="stack-code">PCA</div>
+      <div class="dc-title">Personal Coaching Architecture</div>
+      <div class="dc-desc">The support structure behind the system, giving you access to coaches who help with setup, implementation, troubleshooting, and the process of getting your first results.</div>
     </div>
   </div>
 </div>
@@ -402,28 +403,59 @@ footer{background:rgba(255,255,255,.04);-webkit-backdrop-filter:blur(18px);backd
       <div class="pnum"><strong>₦51M+</strong><span>Student Sales</span></div>
       <div class="pnum"><strong>8+</strong><span>Currencies Earned</span></div>
       <div class="pnum"><strong>4 Days</strong><span>Setup Time</span></div>
-      <div class="pnum"><strong>Day 4</strong><span>First Earning</span></div>
+      <div class="pnum"><strong>5</strong><span>Systems Included</span></div>
     </div>
   </div>
 </div>
 
-<!-- COACH VICTOR VIDEO -->
-<div class="video-section">
-  <div class="section-tag reveal">See The Proof</div>
+<!-- UNDER THE HOOD -->
+<div class="what-section">
+  <div class="section-tag reveal">The Technology</div>
   <div class="divider-line reveal"></div>
-  <h2 class="section-title reveal">Coach Victor<br><span>₦1M+ Withdrawn Live.</span></h2>
-  <p class="reveal" style="color:var(--muted);font-size:.88rem;line-height:1.7;margin-bottom:20px">The man who will personally handle your final setup — watch what his system generates.</p>
-  <div class="video-card reveal">
-    <div class="vc-top">
-      <div class="vc-label">◆ Live Withdrawal — Real Proof</div>
-      <div class="vc-title">Coach Victor — EEM26 Founder</div>
-      <div class="vc-sub">Your Day 4 coach. On camera. Showing you exactly what's possible.</div>
+  <h2 class="section-title reveal">Under <span>The Hood</span></h2>
+  <p class="reveal" style="color:var(--muted);font-size:.88rem;line-height:1.7">The technology that powers your Smart Reply Engine.</p>
+
+  <div class="timeline">
+    <div class="tl-item reveal">
+      <div class="tl-day">1</div>
+      <div class="tl-content">
+        <div class="tl-title">AI Intelligence Layer</div>
+        <div class="tl-desc">The AI system that understands customer messages, interprets their intent, and generates relevant replies.</div>
+      </div>
     </div>
-    <div class="vf-wide"><iframe src="https://www.youtube.com/embed/Xp1q8xigFO8" allowfullscreen allow="autoplay; encrypted-media; picture-in-picture" loading="lazy"></iframe></div>
+    <div class="tl-item reveal">
+      <div class="tl-day">2</div>
+      <div class="tl-content">
+        <div class="tl-title">Knowledge Base Architecture</div>
+        <div class="tl-desc">The system that organizes your product information, prices, FAQs, policies, and other business details so the AI can respond accurately.</div>
+      </div>
+    </div>
+    <div class="tl-item reveal">
+      <div class="tl-day">3</div>
+      <div class="tl-content">
+        <div class="tl-title">Omnichannel API Integration</div>
+        <div class="tl-desc">The technology that connects the reply engine to platforms like WhatsApp, Instagram, Facebook, or your website so it can receive and respond to messages.</div>
+      </div>
+    </div>
+    <div class="tl-item reveal">
+      <div class="tl-day">4</div>
+      <div class="tl-content">
+        <div class="tl-title">Conversational Automation Framework</div>
+        <div class="tl-desc">The logic behind automated conversations, including lead qualification, product recommendations, follow-ups, FAQs, and transferring complex conversations to a human.</div>
+      </div>
+    </div>
+    <div class="tl-item reveal">
+      <div class="tl-day">5</div>
+      <div class="tl-content">
+        <div class="tl-title">Cloud Infrastructure &amp; Usage</div>
+        <div class="tl-desc">The servers, databases, AI processing, storage, and computing resources required to keep the system running and handle customer conversations.</div>
+      </div>
+    </div>
   </div>
-  <div style="text-align:center;margin-top:28px" class="reveal">
+
+  <div style="text-align:center;margin-top:8px" class="reveal">
     <a href="#" class="dl-btn buy-trigger" style="max-width:480px;margin:0 auto;display:flex">⚡ Download the Premium Version Now</a>
-    <p style="font-size:.7rem;color:var(--muted);margin-top:10px;letter-spacing:.5px">Only 3 slots left · ₦46,820 · Victor handles Day 4</p>
+    <p style="font-size:.7rem;color:var(--muted);margin-top:10px;letter-spacing:.5px">Only 3 slots left · ₦46,820 · 5 systems included</p>
   </div>
 </div>
 
@@ -432,8 +464,8 @@ footer{background:rgba(255,255,255,.04);-webkit-backdrop-filter:blur(18px);backd
   <div class="urgency-inner">
     <div class="urgency-title reveal">⚠ 3 Slots. That's It.</div>
     <div class="urgency-box reveal">
-      <div class="urgency-item"><div class="u-icon">🚫</div><div class="u-text"><strong>Only 5 slots exist.</strong> 2 are already taken. Once the last 3 go — Coach Victor closes this permanently. No waitlist. No second batch.</div></div>
-      <div class="urgency-item"><div class="u-icon">👑</div><div class="u-text">Coach Victor cannot personally handle more than 5 setups at a time. <strong>This exclusivity is the entire point.</strong> You get his direct attention on Day 4.</div></div>
+      <div class="urgency-item"><div class="u-icon">🚫</div><div class="u-text"><strong>Only 5 slots exist.</strong> 2 are already taken. Once the last 3 go, this batch closes. No waitlist. No second batch.</div></div>
+      <div class="urgency-item"><div class="u-icon">🧭</div><div class="u-text">Every buyer gets hands-on setup support from the coaching team. <strong>To keep that support personal, each batch is capped at 5.</strong></div></div>
       <div class="urgency-item"><div class="u-icon">💸</div><div class="u-text">Every second you wait, someone else gets closer to taking your slot. <strong>The slot marked YOU disappears the moment someone else clicks first.</strong></div></div>
     </div>
   </div>
@@ -443,7 +475,7 @@ footer{background:rgba(255,255,255,.04);-webkit-backdrop-filter:blur(18px);backd
 <section class="final-section">
   <div class="exclusive-badge" style="margin-bottom:24px">◆ 3 Slots Remaining ◆</div>
   <h2 class="reveal">YOUR SLOT IS<br><span>WAITING.</span></h2>
-  <p class="final-sub reveal">4 days. Coach Victor personally on Day 4. Your own hosted sales page. Your AI running. You earning. This is not a course. This is your complete setup — done with you, start to finish.</p>
+  <p class="final-sub reveal">5 systems. 4 days of guided setup. Your AI replying to customers, your audience growing, your sales pages live and products ready to sell. This is not a course — it's a complete software stack, set up with you.</p>
 
   <div class="timer-wrap reveal">
     <div class="timer-label">⏳ Slot Closes In</div>
@@ -463,7 +495,7 @@ footer{background:rgba(255,255,255,.04);-webkit-backdrop-filter:blur(18px);backd
       <span class="save-badge">TODAY ONLY</span>
     </div>
     <a href="#" class="dl-btn buy-trigger">⚡ Download the Premium Version Now</a>
-    <div class="btn-note">🔒 Paystack & Flutterwave &nbsp;·&nbsp; ✅ Instant Access &nbsp;·&nbsp; 👑 Victor on Day 4</div>
+    <div class="btn-note">🔒 Paystack & Flutterwave &nbsp;·&nbsp; ✅ Instant Access &nbsp;·&nbsp; 🧭 Coaching Support Included</div>
   </div>
 </section>
 
